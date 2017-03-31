@@ -31,3 +31,7 @@
 # Debug files
 *.dSYM/
 *.su
+
+# CLion files
+/cmake-build-debug
+.idea
