@@ -1,14 +1,19 @@
 #include "zimo.h"
 
-void get_zimo(char *str, char *buffer)
+void get_zimo(char *str, char *buff)
 {
+    char *p = buff;
+    int len = strlen(str);
+    printf("%d\n%s",len,str);
+
+    get_hzk_code((unsigned char*)str, buff);
 
 }
 
 void get_hzk_code(unsigned char *c, char buff[])
 {
     FILE *HZK;
-    if((HZK = fopen("/font/hzk16s", "rb")) == NULL)
+    if((HZK = fopen("../font/hzk16y", "rb")) == NULL)
     {
         printf("Can't open font file!");
     }
@@ -35,7 +40,7 @@ void print_character(char buff[])
         for(j=0; j<2; j++){
             for(i=0; i<8; i++){
                 int flag = buff[k*2+j]&key[i];
-                printf("%s", flag?"â—":"â—‹");
+                printf("%s", flag?"¡ñ":"¡ð");
             }
         }
         printf("\n");
