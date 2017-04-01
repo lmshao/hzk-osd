@@ -1,3 +1,9 @@
+/*
+ * Coding: GB2312
+ * Copyright (c) 2017 Liming Shao <lmshao@163.com>
+ *
+ */
+
 #ifndef HZK_OSD_ZIMO_H
 #define HZK_OSD_ZIMO_H
 

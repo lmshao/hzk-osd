@@ -3,5 +3,5 @@ project(hzk_osd)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c zimo.c zimo.h)
+set(SOURCE_FILES main.c zimo.c zimo.h mask.c mask.h)
 add_executable(hzk_osd ${SOURCE_FILES})

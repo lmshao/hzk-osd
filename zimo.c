@@ -1,3 +1,9 @@
+/*
+ * Coding: GB2312
+ * Copyright (c) 2017 Liming Shao <lmshao@163.com>
+ *
+ */
+
 #include "zimo.h"
 
 void get_zimo(char *str, char *buff)
