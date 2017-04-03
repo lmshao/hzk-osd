@@ -15,9 +15,9 @@ int main() {
     char *str = "中国传媒大学ecdav";
 
     char buff[32];
-    for(int i=0;i<2;i++)
+    for(int i=0;i<4;i+=2)
     {
-        get_zimo(str+=2, buff);
+        get_zimo(str+i, buff);
         print_character(buff);
     }
 

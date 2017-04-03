@@ -10,8 +10,7 @@ void get_zimo(char *str, char *buff)
 {
     char *p = buff;
     int len = strlen(str);
-    printf("%d\n%s",len,str);
-
+//    printf("%d\n%s",len,str);
     get_hzk_code((unsigned char*)str, buff);
 
 }
@@ -43,7 +42,7 @@ void print_character(char buff[])
         for(j=0; j<2; j++){     /* 2 bytes */
             for(i=0; i<8; i++){     /* 8 bits */
                 int flag = buff[k*2+j]&(0x80 >> i);
-                printf("%s", flag?"¡ñ":"¡ð");
+                printf("%s", flag?".":" ");
             }
         }
         printf("\n");
