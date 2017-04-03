@@ -1,5 +1,5 @@
 /*
- * Coding: GB2312
+ * Coding: UTF-8
  * Copyright (c) 2017 Liming Shao <lmshao@163.com>
  *
  */
