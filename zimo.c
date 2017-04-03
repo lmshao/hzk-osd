@@ -37,15 +37,12 @@ void get_hzk_code(unsigned char *c, char buff[])
 void print_character(char buff[])
 {
     int i, j, k;
-    unsigned char key[8] = {
-            0x80,0x40,0x20,0x10,0x08,0x04,0x02,0x01
-    };
 
     printf("\n");
-    for(k=0; k<16; k++){
-        for(j=0; j<2; j++){
-            for(i=0; i<8; i++){
-                int flag = buff[k*2+j]&key[i];
+    for(k=0; k<16; k++){    /* 16*16 pixels */
+        for(j=0; j<2; j++){     /* 2 bytes */
+            for(i=0; i<8; i++){     /* 8 bits */
+                int flag = buff[k*2+j]&(0x80 >> i);
                 printf("%s", flag?"¡ñ":"¡ð");
             }
         }

@@ -5,19 +5,23 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "zimo.h"
+#include "bmp.h"
 
 int main() {
     printf("Hello, World!\n");
-    char *str = "中国传媒大学ecdav";
+//    char *str = "中国传媒大学ecdav";
+//
+//    char buff[32];
+//    for(int i=0;i<2;i++)
+//    {
+//        get_zimo(str+=2, buff);
+//        print_character(buff);
+//    }
 
-    char buff[32];
-    for(int i=0;i<8;i++)
-    {
-        get_zimo(str+=2, buff);
-        print_character(buff);
-    }
+    gen_test_rgb();
 
     return 0;
 }
