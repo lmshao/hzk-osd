@@ -19,7 +19,7 @@ void get_zimo(char *str, char *buff)
 void get_hzk_code(unsigned char *c, char buff[])
 {
     FILE *HZK;
-    if((HZK = fopen("../font/hzk16y", "rb")) == NULL)
+    if((HZK = fopen("./font/hzk16y", "rb")) == NULL)
     {
         printf("Can't open font file!");
     }
