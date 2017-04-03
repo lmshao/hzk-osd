@@ -9,7 +9,7 @@
 #include <string.h>
 #include "bmp.h"
 
-// PIXEL_FORMAT_RGB_1555
+// RGB_555
 
 int create_bmp_file(int width, int height, BITMAP_S **Bitmap)
 {
