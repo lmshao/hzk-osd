@@ -4,8 +4,8 @@
  *
  */
 
-#ifndef HZK_OSD_ZIMO_H
-#define HZK_OSD_ZIMO_H
+#ifndef HZK_OSD_FONT_H
+#define HZK_OSD_FONT_H
 
 #include<stdio.h>
 #include <string.h>
@@ -19,4 +19,4 @@ void get_hzk_code(unsigned char *c, char buff[]);
 
 void print_character(char buff[]);
 
-#endif //HZK_OSD_ZIMO_H
+#endif //HZK_OSD_FONT_H

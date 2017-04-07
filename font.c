@@ -4,15 +4,36 @@
  *
  */
 
-#include "zimo.h"
+#include "font.h"
+#include "bmp.h"
+
 
 void get_zimo(char *str, char *buff)
 {
     char *p = buff;
     int len = strlen(str);
-    printf("%d\n%s",len,str);
-    get_hzk_code((unsigned char*)str, buff);
+    int image_width = len * 16;
+    int image_height = 16;
+    printf("Length of String:%d\n%s",len, str);
+    printf("W:H =%dx%d", image_width, image_height);
 
+//    get_hzk_code((unsigned char*)str, buff);
+    BITMAP_S *bmp;
+    create_bmp_file(image_width, image_height, &bmp);
+    printf("Size:%d\r",bmp->biHeader.biSizeImage);
+
+    for(int i=0; i<len; i++)
+    {
+        if( str[i] & 0x80)  //汉字
+        {
+            printf("H");
+            i++;
+        }
+        else    // ASCII字符
+        {
+            printf("z");
+        }
+    }
 }
 
 void get_hzk_code(unsigned char *c, char buff[])

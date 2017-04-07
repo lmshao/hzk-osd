@@ -4,8 +4,8 @@
  *
  */
 
-#ifndef BMP_H
-#define BMP_H
+#ifndef HZK_OSD_BMP_H
+#define HZK_OSD_BMP_H
 
 #include <stdint.h>
 #pragma pack(2)
@@ -57,4 +57,4 @@ int write_bmp_file(BITMAP_S *pstBitmap, char *file);
 /* generate RGB555 example bitmap */
 void gen_test_rgb();
 
-#endif //BMP_H
+#endif //HZK_OSD_BMP_H
