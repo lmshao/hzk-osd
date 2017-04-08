@@ -10,12 +10,11 @@
 #include<stdio.h>
 #include <string.h>
 
-void get_zimo(char *str, char *buffer);
+void str_to_bmp(unsigned char *str, char *bmp_file);
 
-/*
- *
- */
-void get_hzk_code(unsigned char *c, char buff[]);
+void get_hzk_code(unsigned char *c, unsigned char buff[]);
+
+void fill_pixels(unsigned char *bmp_data, unsigned char *font_data, int type, int seq, int bmp_width);
 
 void print_character(char buff[]);
 
