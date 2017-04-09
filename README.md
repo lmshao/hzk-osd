@@ -4,9 +4,9 @@
 本程序支持GB2312编码格式的汉字和英文字母等半角符号。
 ## 示例
 字符信息   
-![字符串信息BMP](Sample-String.bmp "Title")
+![字符串信息BMP](Sample-String.bmp "Title")   
 时间戳信息   
-![时间戳信息BMP](Sample-Time.bmp "Title")
+![时间戳信息BMP](Sample-Time.bmp "Title")   
 ## 说明
 **font** 目录下为hzk16字体文件。
 RGB555格式BMP图像格式为：
