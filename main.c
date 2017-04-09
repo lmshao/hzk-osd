@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <time.h>
 #include "font.h"
-#include "bmp.h"
 
 int main() {
     printf("Start ...\r\n");
