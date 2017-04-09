@@ -10,10 +10,8 @@
 #include "bmp.h"
 
 // RGB_555
-
 int create_bmp_file(int width, int height, BITMAP_S **Bitmap)
 {
-
     BITMAP_S *pstBitmap =  (BITMAP_S *)malloc(sizeof(BITMAP_S));
     if (pstBitmap == NULL)
     {
@@ -44,7 +42,6 @@ int create_bmp_file(int width, int height, BITMAP_S **Bitmap)
         printf("malloc bmpData error.");
         return 1;
     }
-
     memset(pstBitmap->bmpData, 0, sizeof(uint8_t)*(pstBitmap->biHeader. biSizeImage));
     *Bitmap = pstBitmap;
     return 0;
@@ -62,42 +59,4 @@ int write_bmp_file(BITMAP_S *pstBitmap, char *file)
     fwrite(pstBitmap->bmpData, sizeof(char), (size_t) pstBitmap->biHeader. biSizeImage, fd);
     fclose(fd);
     return 0;
-}
-
-/*MASK: Red 0x7C00, Green 0x03e0, Blue 0x001f*/
-void gen_test_rgb()
-{
-    BITMAP_S *bmp;
-    create_bmp_file(400, 200, &bmp);
-
-    /* generate red bmp */
-    for (int i = 0; i < (*bmp).biHeader.biSizeImage; ++i) {
-        if(i%2)
-            memset((*bmp).bmpData+i, 0x7c, 1);
-        else
-            memset((*bmp).bmpData+i, 0x00, 1);
-    }
-    write_bmp_file(bmp,"red.bmp");
-
-    /* generate green bmp */
-    for (int i = 0; i < (*bmp).biHeader.biSizeImage; ++i) {
-        if(i%2)
-            memset((*bmp).bmpData+i, 0x03, 1);
-        else
-            memset((*bmp).bmpData+i, 0xe0, 1);
-    }
-    write_bmp_file(bmp,"green.bmp");
-
-    /* generate blue bmp */
-    for (int i = 0; i < (*bmp).biHeader.biSizeImage; ++i) {
-        if(i%2)
-            memset((*bmp).bmpData+i, 0x00, 1);
-        else
-            memset((*bmp).bmpData+i, 0x1f, 1);
-    }
-    write_bmp_file(bmp,"blue.bmp");
-
-
-    free((*bmp).bmpData);
-    free(bmp);
 }

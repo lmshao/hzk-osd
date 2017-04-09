@@ -4,4 +4,4 @@ hzk-osd:main.o font.o mask.o bmp.o
 	gcc -std=c99 -c $<
     
 clean:
-	rm -f *.o *.bmp hzk-osd
+	rm -f *.o hzk-osd String.bmp Time.bmp

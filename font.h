@@ -16,6 +16,4 @@ void get_hzk_code(unsigned char *c, unsigned char buff[]);
 
 void fill_pixels(unsigned char *bmp_data, unsigned char *font_data, int type, int seq, int bmp_width);
 
-void print_character(char buff[]);
-
 #endif //HZK_OSD_FONT_H
